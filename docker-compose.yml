@@ -1,0 +1,8 @@
+services:
+  web:
+    build: .
+    image: comfit-website:latest
+    container_name: comfit-website
+    restart: unless-stopped
+    ports:
+      - "8090:80"
