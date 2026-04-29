@@ -1,0 +1,14 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: comfit-website:latest
+    container_name: comfit-website
+    restart: unless-stopped
+    networks:
+      - web
+
+networks:
+  web:
+    external: true
