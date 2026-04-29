@@ -1,6 +1,8 @@
 services:
   web:
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile
     image: comfit-website:latest
     container_name: comfit-website
     restart: unless-stopped

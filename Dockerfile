@@ -2,10 +2,10 @@
 FROM node:20-alpine AS builder
 WORKDIR /app
 
-COPY package*.json ./
+COPY app/package*.json ./
 RUN npm ci
 
-COPY . .
+COPY app/ .
 RUN npm run build
 
 # ───── 2단계: Nginx 정적 호스팅 ─────
