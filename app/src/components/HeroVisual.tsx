@@ -104,7 +104,7 @@ const tiles = [
 function ParetoChart() {
   // SVG로 비용-성능 파레토 곡선 미니 차트
   return (
-    <svg viewBox="0 0 320 180" className="h-full w-full">
+    <svg viewBox="-2 0 330 190" className="h-full w-full">
       <defs>
         <linearGradient id="area" x1="0" x2="0" y1="0" y2="1">
           <stop offset="0%" stopColor="#5b85ff" stopOpacity="0.5" />
@@ -179,15 +179,18 @@ function ParetoChart() {
           OPTIMAL · 7950X
         </text>
       </g>
-      <text x="20" y="172" fontSize="9" fill="rgba(255,255,255,0.4)">
+      {/* x-axis */}
+      <text x="310" y="178" fontSize="9" fill="rgba(255,255,255,0.4)" textAnchor="end">
         cost →
       </text>
+      {/* y-axis */}
       <text
-        x="14"
-        y="28"
+        x="8"
+        y="95"
         fontSize="9"
         fill="rgba(255,255,255,0.4)"
-        transform="rotate(-90 14 28)"
+        textAnchor="middle"
+        transform="rotate(-90 8 95)"
       >
         perf →
       </text>

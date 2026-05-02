@@ -17,9 +17,9 @@ export default function Logo({ size = 'md' }: { size?: 'sm' | 'md' | 'lg' }) {
     )
   }
 
-  const iconH = size === 'sm' ? 'h-7' : 'h-9'
-  const textH = size === 'sm' ? 'h-5' : 'h-6'
-  const gap = size === 'sm' ? 'gap-2' : 'gap-2.5'
+  const iconH = size === 'sm' ? 'h-5' : 'h-7'
+  const textH = size === 'sm' ? 'h-3.5' : 'h-[1.125rem]'
+  const gap = size === 'sm' ? 'gap-1.5' : 'gap-2'
 
   return (
     <a
