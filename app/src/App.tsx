@@ -8,7 +8,6 @@ import Technology from './components/Technology'
 import Stats from './components/Stats'
 import Comparison from './components/Comparison'
 import Pricing from './components/Pricing'
-import Roadmap from './components/Roadmap'
 import CTA from './components/CTA'
 import Footer from './components/Footer'
 
@@ -34,7 +33,6 @@ export default function App() {
         <Technology />
         <Comparison />
         <Pricing />
-        <Roadmap />
         <CTA />
       </main>
       <Footer />

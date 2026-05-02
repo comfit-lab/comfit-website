@@ -7,7 +7,7 @@ const linkGroups = [
     title: '제품',
     links: [
       { label: '핵심 기술', href: '#technology' },
-      { label: '서비스 플로우', href: '#solution' },
+      { label: '서비스 플로우', href: '#flow' },
       { label: '비교', href: '#comparison' },
       { label: '요금제', href: '#pricing' },
     ],
@@ -15,15 +15,18 @@ const linkGroups = [
   {
     title: '회사',
     links: [
-      { label: '로드맵', href: '#solution' },
-      { label: '특허/IP', href: '#technology' },
+      { label: '특허/IP', href: '#patents' },
+      {
+        label: '연구실',
+        href: 'https://ip-cal.ewha.ac.kr',
+        external: true,
+      },
     ],
   },
   {
     title: '리소스',
     links: [
       { label: '베타 신청', href: '#cta' },
-      { label: '연구 소개', href: '#technology' },
       { label: '문의', href: `mailto:${company.email}` },
     ],
   },
@@ -79,6 +82,9 @@ export default function Footer() {
                     <li key={l.label}>
                       <a
                         href={l.href}
+                        {...('external' in l && l.external
+                          ? { target: '_blank', rel: 'noreferrer noopener' }
+                          : {})}
                         className="text-sm text-white/55 transition-colors hover:text-white"
                       >
                         {l.label}
@@ -97,7 +103,7 @@ export default function Footer() {
             rights reserved.
           </p>
           <p className="font-mono text-xs text-white/30">
-            Built for the future of computing.
+            High benchmark scores don't always mean your work is faster.
           </p>
         </div>
       </div>

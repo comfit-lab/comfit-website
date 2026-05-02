@@ -1,34 +1,44 @@
 import { company } from '../data/content'
 
 export default function Logo({ size = 'md' }: { size?: 'sm' | 'md' | 'lg' }) {
-  const px = size === 'sm' ? 'h-7 w-7' : size === 'lg' ? 'h-10 w-10' : 'h-8 w-8'
-  const text = size === 'sm' ? 'text-base' : size === 'lg' ? 'text-2xl' : 'text-lg'
+  if (size === 'lg') {
+    return (
+      <a
+        href="#top"
+        className="group inline-flex transition-transform duration-300 hover:-translate-y-0.5"
+      >
+        <img
+          src="/comfit-logo.png"
+          alt={company.product}
+          className="h-20 w-auto"
+          draggable={false}
+        />
+      </a>
+    )
+  }
+
+  const iconH = size === 'sm' ? 'h-7' : 'h-9'
+  const textH = size === 'sm' ? 'h-5' : 'h-6'
+  const gap = size === 'sm' ? 'gap-2' : 'gap-2.5'
 
   return (
-    <a href="#top" className="group flex items-center gap-2.5">
-      <span
-        className={`relative grid ${px} place-items-center rounded-xl bg-gradient-to-br from-brand-500 to-accent-500 shadow-glow transition-transform duration-300 group-hover:rotate-6`}
-      >
-        <svg
-          viewBox="0 0 24 24"
-          fill="none"
-          className="h-1/2 w-1/2 text-white"
-          aria-hidden
-        >
-          <path
-            d="M5 19V5l14 14V5"
-            stroke="currentColor"
-            strokeWidth="2.4"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        </svg>
-      </span>
-      <span className={`font-display font-bold ${text} tracking-tight`}>
-        {company.name}
-        <span className="ml-1 hidden text-white/40 sm:inline">·</span>
-        <span className="ml-1 hidden text-white/60 sm:inline">{company.product}</span>
-      </span>
+    <a
+      href="#top"
+      className={`group flex items-center ${gap} transition-transform duration-300 hover:-translate-y-0.5`}
+    >
+      <img
+        src="/comfit-icon.png"
+        alt=""
+        aria-hidden
+        className={`${iconH} w-auto`}
+        draggable={false}
+      />
+      <img
+        src="/comfit-text.png"
+        alt={company.product}
+        className={`${textH} w-auto`}
+        draggable={false}
+      />
     </a>
   )
 }

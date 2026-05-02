@@ -75,7 +75,7 @@ export default function Technology() {
       </div>
 
       {/* Patents */}
-      <div className="mt-16">
+      <div id="patents" className="mt-16 scroll-mt-24">
         <h3 className="font-display text-lg font-semibold text-white">
           관련 특허
         </h3>

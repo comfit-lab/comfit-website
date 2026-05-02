@@ -7,6 +7,7 @@ const STEP_ICONS = [ScanSearch, Microscope, Sparkles]
 export default function HowItWorks() {
   return (
     <Section
+      id="flow"
       eyebrow="How it works"
       title={
         <>
