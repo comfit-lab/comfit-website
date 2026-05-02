@@ -8,3 +8,10 @@ services:
     restart: unless-stopped
     ports:
       - "8090:80"
+    networks:
+      - web
+      - default
+
+networks:
+  web:
+    external: true
